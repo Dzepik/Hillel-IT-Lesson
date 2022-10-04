@@ -16,10 +16,6 @@ price = {
 lower_limit = 35.9
 upper_limit = 38.339
 
-
-def get_dict_keys_from_range(price, lower_limit, upper_limit):
-    return [price_item[0] for price_item in price.items() if lower_limit <= price_item[1] <= upper_limit]
-
-print(get_dict_keys_from_range(price, lower_limit, upper_limit))
-
-
+for price_item in price.items():
+    if lower_limit <= price_item[1] <= upper_limit:
+        print(price_item)
