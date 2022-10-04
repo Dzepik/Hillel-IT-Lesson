@@ -4,7 +4,7 @@
 
 price = {
     "cito": 47.999,
-    "BB_studio" 42.999,
+    "BB_studio": 42.999,
     "momo": 49.999,
     "main-service": 37.245,
     "buy.now": 38.324,
@@ -14,5 +14,12 @@ price = {
     "rozetka": 38.003}
 
 lower_limit = 35.9
-upper_limit = 37.339
+upper_limit = 38.339
+
+
+def get_dict_keys_from_range(price, lower_limit, upper_limit):
+    return [price_item[0] for price_item in price.items() if lower_limit <= price_item[1] <= upper_limit]
+
+print(get_dict_keys_from_range(price, lower_limit, upper_limit))
+
 
