@@ -14,8 +14,8 @@ price = {
     "rozetka": 38.003}
 
 lower_limit = 35.9
-upper_limit = 38.339
+upper_limit = 37.339
 
 for price_item in price.items():
     if lower_limit <= price_item[1] <= upper_limit:
-        print(price_item)
+        print(price_item[0])
