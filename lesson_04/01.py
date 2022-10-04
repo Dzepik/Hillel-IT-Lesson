@@ -5,6 +5,7 @@
 
 my_string = input('Enter the text: ')
 my_list = my_string.split()
+print(my_list)
 count = 0
 glas = 'AaEeIiOoUu'
 for word in my_list:
