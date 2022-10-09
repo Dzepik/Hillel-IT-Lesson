@@ -4,12 +4,12 @@
 """
 import requests
 from pprint import pprint
-import json
+
 url = 'http://api.open-notify.org/astros.json'
 
-response = requests.get(url)
-response_dict = json.loads(response.content)
-people = response_dict['people']
+response = requests.get(url).json()
+
+people = response['people']
 astronavt_name = []
 
 for craft in people:
